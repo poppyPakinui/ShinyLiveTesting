@@ -1,6 +1,5 @@
 # from shiny.express import input, render, ui
 
-import shinylive
 
 from dataclasses import dataclass
 from pathlib import Path
@@ -238,9 +237,3 @@ def server(input, output, session):
 
 app = App(app_ui, server, debug=False)
 
-if __name__ == "app":
-    print("RUNNING")
-    shinylive.run(ui=app_ui, server=server)
-    print("FINSIHED RUNNING")
-else:
-    print("HI" + __name__)
